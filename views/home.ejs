@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+    <h1>Welcome to MusiX</h1>
+    <h3>Music player:</h3>
+    <figure>
+
+        <figcaption>Now playing: <strong> <%= songName %> </strong></figcaption>
+        <audio controls autoplay>
+            Play
+            <code>audio</code>
+        </audio>
+
+
+    </figure>
+    <form action="/" method="post">
+        <button class="btn btn-warning btn-outline-danger" type="submit" name="nav" value ="prev">
+            <img src="/icons/prev.svg" height="50px" width="50px" id="prev">
+        </button>
+        <button class="btn btn-warning btn-outline-danger" type="submit" name="nav" value ="<%=play%>">
+            <img src="/icons/<%=play%>.svg" height="50px" width="50px" id="play">
+        </button>
+        <button class="btn btn-warning btn-outline-danger" type="submit" name="nav" value="next">
+            <img src="/icons/next.svg" height="50px" width="50px" id="next">
+        </button>
+    </form>
+
+    <%- include("partials/footer.ejs") %>
